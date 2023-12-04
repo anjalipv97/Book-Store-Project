@@ -9,7 +9,9 @@
     "node": "20.x"
   },  
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "vite": "^4.4.5" 
+  },
   "scripts": {
     "install-deps": "cd app && npm install && cd ../server && npm install && cd ..",
     "build-frontend": "cd app && npm run build",
