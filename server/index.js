@@ -5,6 +5,7 @@ import booksRoute from './routes/booksRoute.js';
 import cors from "cors";
 import dotenv from 'dotenv';
 import path from 'path'; // Import the path module
+import { fileURLToPath } from 'url';
 
 dotenv.config(); // This loads the variables from .env into process.env
 
@@ -12,6 +13,9 @@ const PORT = process.env.PORT || 5000;
 const mongoDBURL = process.env.mongoDBURL;
 
 const app=express();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
