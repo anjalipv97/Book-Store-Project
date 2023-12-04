@@ -9,6 +9,12 @@ dotenv.config(); // This loads the variables from .env into process.env
 const PORT = process.env.PORT || 5000;
 const mongoDBURL = process.env.mongoDBURL;
 
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Handle other routes and serve index.html for SPA behavior
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 const app=express();
 
