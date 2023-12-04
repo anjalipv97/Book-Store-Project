@@ -13,7 +13,8 @@
   "description": "��#\u0000 \u0000B\u0000o\u0000o\u0000k\u0000-\u0000S\u0000t\u0000o\u0000r\u0000e\u0000-\u0000P\u0000r\u0000o\u0000j\u0000e\u0000c\u0000t\u0000\r\u0000 \u0000",
   "version": "1.0.0",
   "engines": {
-    "node": "20.10.0"
+    "node": "20.10.0",
+    "npm": "10.2.3"
   },
   "main": "index.js",
   "devDependencies": {
