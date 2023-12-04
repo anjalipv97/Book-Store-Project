@@ -4,6 +4,8 @@ import mongoose from 'mongoose';
 import booksRoute from './routes/booksRoute.js';
 import cors from "cors";
 import dotenv from 'dotenv';
+import path from 'path'; // Import the path module
+
 dotenv.config(); // This loads the variables from .env into process.env
 
 const PORT = process.env.PORT || 5000;
