@@ -19,10 +19,13 @@ app.get("/", (request, response) => {
 
 app.use("/", booksRoute);
 
+app.use(express.static(process.cwd() + "/dist"));
+
 mongoose
   .connect(mongoDBURL)
   .then(() => {
     console.log(`App connected to Database`);
+    console.log(process.cwd() + "/dist");
     app.listen(PORT, () => {
       console.log(`App is listening to Port:${PORT}`);
     });

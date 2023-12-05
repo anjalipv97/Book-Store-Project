@@ -10,6 +10,11 @@ import BooksCard from "../components/home/BooksCard";
 import bookLogo from "../assets/book-logo.png";
 import { useAuth } from "../context/AuthContext";
 
+const baseURL =
+  process.env.NODE_ENV === "production"
+    ? "https://your-production-url.com"
+    : "http://localhost:5558";
+
 const BooksTracker = () => {
   const { user, login, logout } = useAuth();
 
@@ -21,7 +26,7 @@ const BooksTracker = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://localhost:5558/books")
+      .get(`${baseURL}/books`)
       .then((response) => {
         setBooks(response.data);
         setLoading(false);

@@ -5,6 +5,11 @@ import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import Error from "../pages/Error";
 
+const baseURL =
+  process.env.NODE_ENV === "production"
+    ? "https://your-production-url.com"
+    : "http://localhost:5558";
+
 const Signup = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -14,7 +19,7 @@ const Signup = () => {
 
   const handleSignup = async () => {
     try {
-      const response = await axios.post("http://localhost:5558/signup", {
+      const response = await axios.post(`${baseURL}/signup`, {
         username,
         password,
       });

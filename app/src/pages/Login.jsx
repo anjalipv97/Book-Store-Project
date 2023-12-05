@@ -11,9 +11,14 @@ const Login = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
 
+  const baseURL =
+    process.env.NODE_ENV === "production"
+      ? "https://your-production-url.com"
+      : "http://localhost:5558";
+
   const handleLogin = async () => {
     try {
-      const response = await axios.post("http://localhost:5558/login", {
+      const response = await axios.post(`${baseURL}/login`, {
         username,
         password,
       });

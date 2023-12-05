@@ -6,6 +6,11 @@ import { ToastContainer, toast } from "react-toastify";
 import { useAuth } from "../context/AuthContext";
 import { Link } from "react-router-dom";
 
+const baseURL =
+  process.env.NODE_ENV === "production"
+    ? "https://your-production-url.com"
+    : "http://localhost:5558";
+
 const Home = () => {
   const { user, logout } = useAuth();
 
@@ -18,7 +23,7 @@ const Home = () => {
         navigate("/login");
       }
       const { data } = await axios.post(
-        "http://localhost:5007",
+        `${baseURL}`,
         {},
         { withCredentials: true }
       );
