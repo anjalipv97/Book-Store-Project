@@ -3,9 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
-import { useAuth } from '../context/AuthContext';
-import { Link } from 'react-router-dom';
-
+import { useAuth } from "../context/AuthContext";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const { user, logout } = useAuth();
@@ -37,18 +36,7 @@ const Home = () => {
     removeCookie("token");
     navigate("/signup");
   };
-  // return (
-  //   <>
-  //     <div className="home_page">
-  //       <h4>
-  //         {" "}
-  //         Welcome <span>{username}</span>
-  //       </h4>
-  //       <button onClick={Logout}>LOGOUT</button>
-  //     </div>
-  //     <ToastContainer />
-  //   </>
-  // );
+
   return (
     <div>
       <h2>Home</h2>
