@@ -59,7 +59,7 @@ const App = () => {
           element={<ProtectedRoute element={<DeleteBook />} />}
         />
         <Route path="*" element={<NotFound />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
       </Routes>

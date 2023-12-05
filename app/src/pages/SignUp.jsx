@@ -3,11 +3,13 @@ import React, { useState, useContext } from "react";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
+import Error from "../pages/Error";
 
 const Signup = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const { login } = useAuth();
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleSignup = async () => {
@@ -21,6 +23,7 @@ const Signup = () => {
       navigate("/books");
     } catch (error) {
       console.error("Error signing up:", error);
+      setError("Incorrect username or password. Please try again.");
     }
   };
 
@@ -57,7 +60,7 @@ const Signup = () => {
       >
         Signup
       </button>
-
+      {error && <Error />}
       <p className="mt-4 text-sm text-gray-600">
         Already have an account?{" "}
         <Link to="/login" className="text-blue-500 hover:underline">
