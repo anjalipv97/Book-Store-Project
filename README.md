@@ -2,10 +2,6 @@
 
 This repository contains a Book Store App built using MERN Stack.Please follow the instructions to set it up.This application is a Book Management System that allows users to manage their book collection by performing various operations like creating, editing, and deleting books.
 
-# Book Management System
-
-## Overview
-
 This application is a Book Management System that allows users to manage their book collection by performing various operations like creating, editing, and deleting books.
 
 ## Features
