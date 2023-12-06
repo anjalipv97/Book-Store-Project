@@ -1,11 +1,17 @@
 import express from "express";
-import { PORT, mongoDBURL } from "./config.js";
+// import { PORT, mongoDBURL } from "./config.js";
 import mongoose from "mongoose";
 import booksRoute from "./routes/booksAndUserRoute.js";
 import cors from "cors";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 import path from "path";
+import dotenv from "dotenv";
+
+dotenv.config(); // This loads the variables from .env into process.env
+
+const PORT = process.env.PORT || 5000;
+const mongoDBURL = process.env.mongoDBURL;
 
 const app = express();
 
