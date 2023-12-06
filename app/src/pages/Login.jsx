@@ -3,8 +3,7 @@ import { useAuth } from "../context/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import Error from "../pages/Error";
-
-const baseURL = import.meta.env.BASE_URL;
+import { baseURL } from "../config";
 
 const Login = () => {
   const [username, setUsername] = useState("");
