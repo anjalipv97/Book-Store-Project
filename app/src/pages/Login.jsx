@@ -3,9 +3,8 @@ import { useAuth } from "../context/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import Error from "../pages/Error";
-import dotenv from "dotenv";
 
-dotenv.config();
+const baseURL = import.meta.env.BASE_URL;
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -14,10 +13,10 @@ const Login = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
 
-  const baseURL =
-    process.env.NODE_ENV === "production"
-      ? "https://bookstoknow-4aedb5e8f3bf.herokuapp.com"
-      : "http://localhost:5558";
+  // const baseURL =
+  //   process.env.NODE_ENV === "production"
+  //     ? "https://bookstoknow-4aedb5e8f3bf.herokuapp.com"
+  //     : "http://localhost:5558";
 
   const handleLogin = async () => {
     try {
