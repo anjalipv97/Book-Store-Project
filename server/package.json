@@ -5,9 +5,9 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "install-deps": "cd app && npm install && cd ../server && npm install && cd ..",
-    "build-frontend": "cd app && npm run build",
-    "start-backend": "cd server && npm start",
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "build-frontend": "npm run build",
     "heroku-postbuild": "npm run build-frontend"
   },
   "keywords": [],
