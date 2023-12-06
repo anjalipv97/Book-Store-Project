@@ -3,8 +3,16 @@ import { PORT, mongoDBURL } from "./config.js";
 import mongoose from "mongoose";
 import booksRoute from "./routes/booksAndUserRoute.js";
 import cors from "cors";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+import path from "path";
 
 const app = express();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.use(express.static(path.join(__dirname, "dist")));
 
 //Middleware for parsing request body//
 app.use(express.json());
@@ -19,7 +27,11 @@ app.get("/", (request, response) => {
 
 app.use("/", booksRoute);
 
-app.use(express.static(process.cwd() + "/dist"));
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = dirname(__filename);
+
+// // Serve static files from the 'dist' directory
+// app.use(express.static(path.join(__dirname, "dist")));
 
 mongoose
   .connect(mongoDBURL)

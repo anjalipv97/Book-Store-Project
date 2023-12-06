@@ -5,8 +5,10 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js"
+    "install-deps": "cd app && npm install && cd ../server && npm install && cd ..",
+    "build-frontend": "cd app && npm run build",
+    "start-backend": "cd server && npm start",
+    "heroku-postbuild": "npm run build-frontend"
   },
   "keywords": [],
   "author": "",
