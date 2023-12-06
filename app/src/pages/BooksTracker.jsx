@@ -26,7 +26,7 @@ const BooksTracker = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`${baseURL}/books`)
+      .get(`https://bookstoknow-4aedb5e8f3bf.herokuapp.com/books`)
       .then((response) => {
         setBooks(response.data);
         setLoading(false);
