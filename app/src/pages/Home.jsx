@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const baseURL =
   process.env.NODE_ENV === "production"
-    ? "https://bookstoknow-4aedb5e8f3bf.herokuapp.com/"
+    ? "https://bookstoknow-4aedb5e8f3bf.herokuapp.com"
     : "http://localhost:5558";
 
 const Home = () => {
