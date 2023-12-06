@@ -9,11 +9,12 @@ import BooksTable from "../components/home/BooksTable";
 import BooksCard from "../components/home/BooksCard";
 import bookLogo from "../assets/book-logo.png";
 import { useAuth } from "../context/AuthContext";
+import { baseURL } from "../config";
 
-const baseURL =
-  process.env.NODE_ENV === "production"
-    ? "https://bookstoknow-4aedb5e8f3bf.herokuapp.com"
-    : "http://localhost:5558";
+// const baseURL =
+//   process.env.NODE_ENV === "production"
+//     ? "https://bookstoknow-4aedb5e8f3bf.herokuapp.com"
+//     : "http://localhost:5558";
 
 const BooksTracker = () => {
   const { user, login, logout } = useAuth();
