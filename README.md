@@ -26,30 +26,31 @@ This repository contains a Book Store App built using MERN Stack.This applicatio
 
 ## Technologies Used
 
-- Frontend: React.js, React Router, Axios
-- Backend: Node.js, Express.js, MongoDB (or any other database)
+- Frontend: React.js, React Router, Tailwind CSS
+- Backend: Node.js, Express.js, MongoDB 
 - Authentication: JWT (JSON Web Tokens)
 
 ## How to Use
 
-1. Clone the repository.
-2. Install dependencies using `npm install`.
-3. Start the backend server.
-4. Start the frontend server.
+1. Clone the repository using 'git clone'
+2. Go to 'app' folder and do: 'npm install' to install dependencies. 
+3. Start Frontend server
+4. Go to 'server' folder and run: 'npm install' to install dependencies. 
+5. Star Backend server
 
 ## Folder Structure
 
-- `/client`: Contains the frontend React application.
+- `/app`: Contains the frontend React application.
 - `/server`: Contains the backend Node.js server.
 
 ## Setup
 
 1. **Backend Setup**:
    - Configure environment variables (e.g., database connection).
-   - Run `npm start` in the `/server` directory to start the server.
+   - Run `npm run start` in the `/server` directory to start the server.
 
 2. **Frontend Setup**:
-   - Run `npm start` in the `/client` directory to start the React app.
+   - Run `npm run dev` in the `/app` directory to start the React app.
 
 ## API Endpoints
 
@@ -60,4 +61,3 @@ This repository contains a Book Store App built using MERN Stack.This applicatio
 - `GET /books/:id`: Retrieve details of a specific book.
 - `PUT /books/:id`: Update details of a specific book.
 - `DELETE /books/:id`: Delete a specific book.
-
