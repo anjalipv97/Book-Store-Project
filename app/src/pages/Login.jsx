@@ -3,6 +3,9 @@ import { useAuth } from "../context/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import Error from "../pages/Error";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -18,13 +21,10 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post(
-        `https://bookstoknow-4aedb5e8f3bf.herokuapp.com/login`,
-        {
-          username,
-          password,
-        }
-      );
+      const response = await axios.post(`${baseURL}/login`, {
+        username,
+        password,
+      });
       const token = response.data.token;
       login(token);
       navigate("/books");
