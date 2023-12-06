@@ -11,12 +11,10 @@ const Login = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
 
-  // const baseURL =
-  //   process.env.NODE_ENV === "production"
-  //     ? "https://bookstoknow-4aedb5e8f3bf.herokuapp.com/"
-  //     : "http://localhost:5558";
-
-  const baseURL = "https://bookstoknow-4aedb5e8f3bf.herokuapp.com/";
+  const baseURL =
+    process.env.NODE_ENV === "production"
+      ? "https://bookstoknow-4aedb5e8f3bf.herokuapp.com/"
+      : "http://localhost:5558";
 
   const handleLogin = async () => {
     try {
