@@ -1,14 +1,9 @@
-// src/pages/Signup.js
 import React, { useState, useContext } from "react";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import Error from "../pages/Error";
-
-const baseURL =
-  process.env.NODE_ENV === "production"
-    ? "https://bookstoknow-4aedb5e8f3bf.herokuapp.com"
-    : "http://localhost:5558";
+import { baseURL } from "../config";
 
 const Signup = () => {
   const [username, setUsername] = useState("");

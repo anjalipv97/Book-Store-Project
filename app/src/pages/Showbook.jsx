@@ -3,11 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import BackButton from "../components/BackButton";
 import Spinner from "../components/Spinner";
-
-const baseURL =
-  process.env.NODE_ENV === "production"
-    ? "https://bookstoknow-4aedb5e8f3bf.herokuapp.com"
-    : "http://localhost:5558";
+import { baseURL } from "../config";
 
 const ShowBook = () => {
   const [book, setBook] = useState({});

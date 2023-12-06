@@ -5,11 +5,7 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import { useAuth } from "../context/AuthContext";
 import { Link } from "react-router-dom";
-
-const baseURL =
-  process.env.NODE_ENV === "production"
-    ? "https://bookstoknow-4aedb5e8f3bf.herokuapp.com"
-    : "http://localhost:5558";
+import { baseURL } from "../config";
 
 const Home = () => {
   const { user, logout } = useAuth();
