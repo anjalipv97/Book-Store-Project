@@ -30,27 +30,19 @@ This repository contains a Book Store App built using MERN Stack.This applicatio
 - Backend: Node.js, Express.js, MongoDB 
 - Authentication: JWT (JSON Web Tokens)
 
-## How to Use
-
-1. Clone the repository using 'git clone'
-2. Go to 'app' folder and do: 'npm install' to install dependencies. 
-3. Start Frontend server
-4. Go to 'server' folder and run: 'npm install' to install dependencies. 
-5. Star Backend server
-
 ## Folder Structure
 
 - `/app`: Contains the frontend React application.
 - `/server`: Contains the backend Node.js server.
 
-## Setup
+## How to Use or run the app in development environment
 
-1. **Backend Setup**:
-   - Configure environment variables (e.g., database connection).
-   - Run `npm run start` in the `/server` directory to start the server.
-
-2. **Frontend Setup**:
-   - Run `npm run dev` in the `/app` directory to start the React app.
+1. Clone the repository using 'git clone https://github.com/anjalipv97/Book-Store-Project.git'
+2. Go to '/app' folder and do: 'npm install' to install dependencies.
+3. For running frontend in development environment, do a small config change. Open the 'vite.config.js' file and change the server port value to '5000'
+4. To run the frontend app, do: 'npm run dev'
+5. Go to '/server' folder and do: 'npm install' to install dependencies. 
+6. To run the backed server, do: 'npm run start'
 
 ## API Endpoints
 
