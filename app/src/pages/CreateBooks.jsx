@@ -45,7 +45,7 @@ const CreateBooks = () => {
         Create Book
       </h1>
       {loading ? <Spinner /> : ""}
-      <div className="flex flex-col border-2 border-sky-400 rounded-xl w-[600px] p-4 mx-auto">
+      <div className="flex flex-col border-2 border-sky-400 rounded-xl md:w-[600px] p-4 mx-auto">
         <div className="my-4">
           <input
             placeholder="Title"
